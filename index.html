@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelMart - Premium Minecraft Accounts</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary-blue: #1a73e8;
+            --secondary-blue: #4285f4;
+            --dark-blue: #0d47a1;
+            --light-blue: #e8f0fe;
+            --white: #ffffff;
+            --light-gray: #f5f5f5;
+            --dark-gray: #222222;
+            --gray: #5f6368;
+            --accent: #34a853;
+            --accent-dark: #2d8c47;
+            --gradient-primary: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+            --gradient-secondary: linear-gradient(135deg, #4285f4 0%, #1a73e8 100%);
+            --gradient-success: linear-gradient(135deg, #34a853 0%, #2d8c47 100%);
+            --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+            --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.1);
+            --shadow-heavy: 0 15px 35px rgba(0, 0, 0, 0.15);
+        }
+
+        body {
+            background-color: var(--light-gray);
+            color: var(--dark-gray);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-light);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s;
+        }
+
+        header.scrolled {
+            box-shadow: var(--shadow-medium);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo i {
+            color: var(--primary-blue);
+            font-size: 28px;
+        }
+
+        .logo h1 {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--dark-blue);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--gray);
+            font-weight: 600;
+            transition: color 0.3s;
+            font-size: 16px;
+            position: relative;
+        }
+
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background: var(--gradient-primary);
+            transition: width 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary-blue);
+        }
+
+        nav ul li a:hover:after {
+            width: 100%;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 15px;
+        }
+
+        .btn-signin {
+            background-color: transparent;
+            color: var(--primary-blue);
+            border: 1px solid var(--primary-blue);
+        }
+
+        .btn-signin:hover {
+            background-color: var(--light-blue);
+            transform: translateY(-2px);
+        }
+
+        .btn-cart {
+            background: var(--gradient-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-cart:hover {
+            background: var(--gradient-secondary);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .mobile-menu {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--primary-blue);
+            background: none;
+            border: none;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,0 L100,0 L100,100 Z" fill="white" opacity="0.05"/></svg>');
+        }
+
+        .hero h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero p {
+            font-size: 18px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .btn-hero {
+            background-color: white;
+            color: var(--primary-blue);
+            font-size: 18px;
+            padding: 15px 30px;
+            border-radius: 8px;
+            font-weight: 700;
+            box-shadow: var(--shadow-medium);
+        }
+
+        .btn-hero:hover {
+            background-color: var(--light-blue);
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        /* Products Section */
+        .products {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 36px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 17px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-light);
+            transition: all 0.4s;
+            border: 1px solid #eee;
+        }
+
+        .product-card:hover {
+            transform: translateY(-15px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .product-header {
+            background: var(--gradient-primary);
+            padding: 25px;
+            text-align: center;
+            color: white;
+        }
+
+        .product-header i {
+            font-size: 52px;
+            margin-bottom: 15px;
+            filter: drop-shadow(0 2px 5px rgba(0,0,0,0.2));
+        }
+
+        .product-header h3 {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .product-body {
+            padding: 30px;
+        }
+
+        .product-features {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .product-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .product-features li i {
+            margin-right: 12px;
+            font-size: 14px;
+        }
+
+        .product-features li .fa-check {
+            color: var(--accent);
+        }
+
+        .product-features li .fa-times {
+            color: #ea4335;
+        }
+
+        .product-price {
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .price {
+            font-size: 42px;
+            color: var(--primary-blue);
+            font-weight: 800;
+        }
+
+        .old-price {
+            text-decoration: line-through;
+            color: var(--gray);
+            font-size: 22px;
+            margin-left: 10px;
+        }
+
+        .btn-buy {
+            display: block;
+            width: 100%;
+            background: var(--gradient-primary);
+            color: white;
+            text-align: center;
+            padding: 16px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 17px;
+            text-decoration: none;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover {
+            background: var(--gradient-secondary);
+            box-shadow: var(--shadow-medium);
+            transform: translateY(-2px);
+        }
+
+        /* Payment Section */
+        .payment-section {
+            background-color: white;
+            padding: 100px 0;
+            position: relative;
+        }
+
+        .payment-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--gradient-primary);
+        }
+
+        .payment-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .payment-method {
+            background-color: var(--light-blue);
+            border-radius: 12px;
+            padding: 30px;
+            width: 250px;
+            text-align: center;
+            transition: all 0.3s;
+            border: 1px solid #e0e0e0;
+        }
+
+        .payment-method:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .payment-method i {
+            font-size: 52px;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 15px;
+        }
+
+        .payment-method h4 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+
+        .upi-id {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+            font-family: monospace;
+            font-weight: 700;
+            color: var(--dark-gray);
+            border: 2px dashed var(--primary-blue);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 70px 0 30px;
+            position: relative;
+        }
+
+        footer:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 10px;
+            background: var(--gradient-secondary);
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-column h3 {
+            font-size: 22px;
+            margin-bottom: 25px;
+            color: white;
+            font-weight: 700;
+        }
+
+        .footer-column p {
+            color: #ddd;
+            line-height: 1.7;
+        }
+
+        .footer-column ul {
+            list-style: none;
+        }
+
+        .footer-column ul li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .footer-column ul li a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-column ul li a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 2000;
+            justify-content: center;
+            align-items: center;
+            animation: fadeIn 0.3s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .modal-content {
+            background-color: white;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--shadow-heavy);
+            animation: slideUp 0.4s;
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        .modal-header {
+            background: var(--gradient-primary);
+            color: white;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .modal-header h3 {
+            font-size: 26px;
+            font-weight: 700;
+        }
+
+        .modal-body {
+            padding: 30px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--dark-gray);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 14px 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border 0.3s;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-blue);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(26, 115, 232, 0.2);
+        }
+
+        .modal-footer {
+            padding: 20px 30px;
+            background-color: #f9f9f9;
+            display: flex;
+            justify-content: flex-end;
+            gap: 15px;
+        }
+
+        .btn-close {
+            background-color: #e0e0e0;
+            color: var(--dark-gray);
+        }
+
+        .btn-close:hover {
+            background-color: #d0d0d0;
+        }
+
+        .btn-submit {
+            background: var(--gradient-primary);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            background: var(--gradient-secondary);
+        }
+
+        /* Success Modal Styles */
+        .success-modal .modal-content {
+            max-width: 450px;
+            text-align: center;
+        }
+
+        .success-modal .modal-header {
+            background: var(--gradient-success);
+        }
+
+        .success-icon {
+            font-size: 80px;
+            color: var(--accent);
+            margin: 20px 0;
+            animation: bounce 1s;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+            40% {transform: translateY(-20px);}
+            60% {transform: translateY(-10px);}
+        }
+
+        .success-message {
+            font-size: 20px;
+            margin: 20px 0;
+            color: var(--dark-gray);
+            font-weight: 600;
+        }
+
+        .success-details {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            text-align: left;
+            border-left: 4px solid var(--accent);
+        }
+
+        .success-details p {
+            margin: 8px 0;
+        }
+
+        .success-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .header-container {
+                flex-wrap: wrap;
+            }
+            
+            nav {
+                order: 3;
+                width: 100%;
+                margin-top: 20px;
+                display: none;
+            }
+            
+            nav.active {
+                display: block;
+            }
+            
+            nav ul {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            nav ul li {
+                padding: 12px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            .mobile-menu {
+                display: block;
+            }
+            
+            .auth-buttons {
+                margin-left: auto;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 36px;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .product-grid {
+                grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            }
+            
+            .payment-method {
+                width: 100%;
+                max-width: 300px;
+            }
+            
+            .modal-content {
+                width: 95%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header id="mainHeader">
+        <div class="container header-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <h1>Pixel<span>Mart</span></h1>
+            </div>
+            
+            <button class="mobile-menu" id="mobileMenu">
+                <i class="fas fa-bars"></i>
+            </button>
+            
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#payment">Payment</a></li>
+                    <li><a href="#support">Support</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+            
+            <div class="auth-buttons">
+                <button class="btn btn-signin" id="signInBtn">Sign In</button>
+                <button class="btn btn-cart"><i class="fas fa-shopping-cart"></i> Cart (0)</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <h2>Premium Minecraft Accounts</h2>
+            <p>Get the best Minecraft accounts with full access, security guarantee, and instant delivery. We offer a wide range of accounts at unbeatable prices.</p>
+            <button class="btn btn-hero" id="shopNowBtn">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Minecraft Account Store</h2>
+                <p>Choose from our selection of premium Minecraft accounts with varying features and access levels.</p>
+            </div>
+            
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <i class="fas fa-crown"></i>
+                        <h3>Full Access Account</h3>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Complete account ownership</li>
+                            <li><i class="fas fa-check"></i> Email access included</li>
+                            <li><i class="fas fa-check"></i> Security questions reset</li>
+                            <li><i class="fas fa-check"></i> Name change available</li>
+                            <li><i class="fas fa-check"></i> 100% secure guarantee</li>
+                        </ul>
+                        <div class="product-price">
+                            <span class="price">₹650</span>
+                            <span class="old-price">₹1200</span>
+                        </div>
+                        <button class="btn-buy" data-product="Full Access Account" data-price="650">Buy Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Semi-Access Account</h3>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Partial account access</li>
+                            <li><i class="fas fa-check"></i> Email not included</li>
+                            <li><i class="fas fa-check"></i> Security questions set</li>
+                            <li><i class="fas fa-check"></i> Name change available</li>
+                            <li><i class="fas fa-check"></i> 90-day warranty</li>
+                        </ul>
+                        <div class="product-price">
+                            <span class="price">₹350</span>
+                            <span class="old-price">₹600</span>
+                        </div>
+                        <button class="btn-buy" data-product="Semi-Access Account" data-price="350">Buy Now</button>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card">
+                    <div class="product-header">
+                        <i class="fas fa-user"></i>
+                        <h3>Basic Account</h3>
+                    </div>
+                    <div class="product-body">
+                        <ul class="product-features">
+                            <li><i class="fas fa-check"></i> Login credentials only</li>
+                            <li><i class="fas fa-check"></i> No email access</li>
+                            <li><i class="fas fa-check"></i> Security questions set</li>
+                            <li><i class="fas fa-times"></i> No name change</li>
+                            <li><i class="fas fa-check"></i> 30-day warranty</li>
+                        </ul>
+                        <div class="product-price">
+                            <span class="price">₹200</span>
+                            <span class="old-price">₹400</span>
+                        </div>
+                        <button class="btn-buy" data-product="Basic Account" data-price="200">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Payment Section -->
+    <section class="payment-section" id="payment">
+        <div class="container">
+            <div class="section-title">
+                <h2>Secure Payment Options</h2>
+                <p>We offer multiple secure payment methods to ensure a smooth and safe transaction.</p>
+            </div>
+            
+            <div class="payment-methods">
+                <div class="payment-method">
+                    <i class="fas fa-credit-card"></i>
+                    <h4>Credit/Debit Card</h4>
+                    <p>Pay securely using your Visa, Mastercard, or other major credit/debit cards.</p>
+                </div>
+                
+                <div class="payment-method">
+                    <i class="fas fa-university"></i>
+                    <h4>Net Banking</h4>
+                    <p>Direct bank transfer from all major Indian banks with secure authentication.</p>
+                </div>
+                
+                <div class="payment-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>UPI Payment</h4>
+                    <p>Instant payment via UPI. Use our UPI ID for quick transactions:</p>
+                    <div class="upi-id">mohdgam888@fam</div>
+                </div>
+                
+                <div class="payment-method">
+                    <i class="fas fa-wallet"></i>
+                    <h4>Digital Wallets</h4>
+                    <p>Pay using popular digital wallets like Paytm, Google Pay, or PhonePe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="support">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>PixelMart</h3>
+                    <p>Your trusted source for premium Minecraft accounts. We provide secure, affordable accounts with instant delivery.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#products">Products</a></li>
+                        <li><a href="#payment">Payment Options</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> support@pixelmart.com</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Delhi, India</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column" id="about">
+                    <h3>Legal</h3>
+                    <ul>
+                        <li><a href="#">Terms of Service</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                        <li><a href="#">Account Usage Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; 2023 PixelMart. All rights reserved. Minecraft is a trademark of Mojang AB. We are not affiliated with Mojang or Microsoft.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Sign In Modal -->
+    <div class="modal" id="signInModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Sign In to PixelMart</h3>
+            </div>
+            <div class="modal-body">
+                <form id="signInForm">
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" class="form-control" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" class="form-control" placeholder="Enter your password" required>
+                    </div>
+                    <div class="form-group">
+                        <a href="#" style="color: var(--primary-blue); font-weight: 600;">Forgot Password?</a>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-close" id="closeSignIn">Close</button>
+                <button class="btn btn-submit" type="submit" form="signInForm">Sign In</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Purchase Modal -->
+    <div class="modal" id="purchaseModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="purchaseTitle">Complete Your Purchase</h3>
+            </div>
+            <div class="modal-body">
+                <form id="purchaseForm">
+                    <div class="form-group">
+                        <label for="product">Selected Product</label>
+                        <input type="text" id="product" class="form-control" readonly>
+                    </div>
+                    <div class="form-group">
+                        <label for="paymentMethod">Payment Method</label>
+                        <select id="paymentMethod" class="form-control" required>
+                            <option value="">Select payment method</option>
+                            <option value="credit">Credit/Debit Card</option>
+                            <option value="netbanking">Net Banking</option>
+                            <option value="upi">UPI (mohdgam888@fam)</option>
+                            <option value="wallet">Digital Wallet</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailPurchase">Email for Delivery</label>
+                        <input type="email" id="emailPurchase" class="form-control" placeholder="Enter your email for account delivery" required>
+                    </div>
+                </form>
+                <p style="margin-top: 20px; font-size: 14px; color: var(--gray);">
+                    <i class="fas fa-info-circle"></i> Account credentials will be sent to your email within 5 minutes after successful payment.
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-close" id="closePurchase">Cancel</button>
+                <button class="btn btn-submit" type="submit" form="purchaseForm">Proceed to Payment</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal success-modal" id="successModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Payment Successful!</h3>
+            </div>
+            <div class="modal-body">
+                <div class="success-icon">
+                    <i class="fas fa-check-circle"></i>
+                </div>
+                <div class="success-message">
+                    Thank you for your purchase!
+                </div>
+                <div class="success-details">
+                    <p><strong>Product:</strong> <span id="successProduct"></span></p>
+                    <p><strong>Amount Paid:</strong> ₹<span id="successAmount"></span></p>
+                    <p><strong>Payment Method:</strong> <span id="successPaymentMethod"></span></p>
+                    <p><strong>Delivery Email:</strong> <span id="successEmail"></span></p>
+                </div>
+                <p style="color: var(--accent); font-weight: 600;">
+                    <i class="fas fa-clock"></i> Your account details will be delivered within 5 minutes!
+                </p>
+                <div class="success-actions">
+                    <button class="btn btn-close" id="closeSuccess">Close</button>
+                    <button class="btn btn-submit" id="goHome">
+                        <i class="fas fa-home"></i> Back to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Audio element for success sound -->
+    <audio id="successSound" preload="auto">
+        <source src="https://assets.mixkit.co/sfx/preview/mixkit-correct-answer-tone-2870.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenu').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('active');
+            
+            // Change icon
+            const icon = this.querySelector('i');
+            if (icon.classList.contains('fa-bars')) {
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times');
+            } else {
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars');
+            }
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.getElementById('mainHeader');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        // Sign In Modal
+        const signInBtn = document.getElementById('signInBtn');
+        const signInModal = document.getElementById('signInModal');
+        const closeSignIn = document.getElementById('closeSignIn');
+
+        signInBtn.addEventListener('click', function() {
+            signInModal.style.display = 'flex';
+        });
+
+        closeSignIn.addEventListener('click', function() {
+            signInModal.style.display = 'none';
+        });
+
+        // Close modal when clicking outside
+        window.addEventListener('click', function(event) {
+            if (event.target === signInModal) {
+                signInModal.style.display = 'none';
+            }
+            if (event.target === purchaseModal) {
+                purchaseModal.style.display = 'none';
+            }
+            if (event.target === successModal) {
+                successModal.style.display = 'none';
+            }
+        });
+
+        // Shop Now button scroll to products
+        document.getElementById('shopNowBtn').addEventListener('click', function() {
+            document.getElementById('products').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Purchase functionality
+        const purchaseModal = document.getElementById('purchaseModal');
+        const closePurchase = document.getElementById('closePurchase');
+        const purchaseTitle = document.getElementById('purchaseTitle');
+        const productInput = document.getElementById('product');
+        const buyButtons = document.querySelectorAll('.btn-buy');
+        
+        // Success Modal Elements
+        const successModal = document.getElementById('successModal');
+        const closeSuccess = document.getElementById('closeSuccess');
+        const goHomeBtn = document.getElementById('goHome');
+        const successProduct = document.getElementById('successProduct');
+        const successAmount = document.getElementById('successAmount');
+        const successPaymentMethod = document.getElementById('successPaymentMethod');
+        const successEmail = document.getElementById('successEmail');
+        const successSound = document.getElementById('successSound');
+
+        let currentProduct = '';
+        let currentPrice = '';
+
+        buyButtons.forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                currentProduct = this.getAttribute('data-product');
+                currentPrice = this.getAttribute('data-price');
+                
+                // Set product name in modal
+                productInput.value = currentProduct;
+                purchaseTitle.textContent = `Purchase: ${currentProduct}`;
+                
+                // Show modal
+                purchaseModal.style.display = 'flex';
+            });
+        });
+
+        closePurchase.addEventListener('click', function() {
+            purchaseModal.style.display = 'none';
+        });
+
+        closeSuccess.addEventListener('click', function() {
+            successModal.style.display = 'none';
+        });
+
+        goHomeBtn.addEventListener('click', function() {
+            successModal.style.display = 'none';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Form submissions
+        document.getElementById('signInForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Sign In functionality would be implemented here. For demo purposes, this is just a simulation.');
+            signInModal.style.display = 'none';
+        });
+
+        document.getElementById('purchaseForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const product = document.getElementById('product').value;
+            const paymentMethodSelect = document.getElementById('paymentMethod');
+            const paymentMethod = paymentMethodSelect.options[paymentMethodSelect.selectedIndex].text;
+            const email = document.getElementById('emailPurchase').value;
+            
+            if (!paymentMethodSelect.value) {
+                alert('Please select a payment method.');
+                return;
+            }
+            
+            // Show payment processing message
+            alert(`Processing payment for ${product} via ${paymentMethod}...\n\nRedirecting to payment gateway...`);
+            
+            // Simulate payment processing delay
+            setTimeout(() => {
+                // Hide purchase modal
+                purchaseModal.style.display = 'none';
+                
+                // Set success modal details
+                successProduct.textContent = product;
+                successAmount.textContent = currentPrice;
+                successPaymentMethod.textContent = paymentMethod;
+                successEmail.textContent = email;
+                
+                // Play success sound
+                successSound.currentTime = 0;
+                successSound.play().catch(e => console.log("Audio play failed:", e));
+                
+                // Show success modal with delay for better UX
+                setTimeout(() => {
+                    successModal.style.display = 'flex';
+                }, 500);
+                
+                // Update cart count
+                const cartBtn = document.querySelector('.btn-cart');
+                const currentCount = parseInt(cartBtn.textContent.match(/\d+/)[0]);
+                cartBtn.innerHTML = `<i class="fas fa-shopping-cart"></i> Cart (${currentCount + 1})`;
+                
+                // Reset form
+                document.getElementById('purchaseForm').reset();
+            }, 1500);
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    
+                    // Close mobile menu if open
+                    const nav = document.getElementById('mainNav');
+                    const mobileIcon = document.querySelector('#mobileMenu i');
+                    if (nav.classList.contains('active')) {
+                        nav.classList.remove('active');
+                        mobileIcon.classList.remove('fa-times');
+                        mobileIcon.classList.add('fa-bars');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>
